@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediQuick Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fdf1eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        .logo {
+            width: 150px;
+            margin: 20px auto;
+        }
+        .logo img {
+            width: 100%;
+        }
+        h1 {
+            color: #000;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        .input-box {
+            display: flex;
+            align-items: center;
+            border: 2px solid #b80000;
+            border-radius: 8px;
+            margin: 10px auto;
+            padding: 5px 10px;
+            width: 300px;
+            background-color: #fff;
+        }
+        .input-box img {
+            width: 20px;
+            margin-right: 10px;
+        }
+        input {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            width: 100%;
+            color: #555;
+        }
+        button {
+            background-color: #b80000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            padding: 10px;
+            width: 300px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #990000;
+        }
+        p {
+            margin-top: 20px;
+            color: #333;
+            font-size: 16px;
+        }
+        p a {
+            color: #b80000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="assets/logo.png" alt="MediQuick Logo">
+        </div>
+        <!-- Title -->
+        <h1>MediQuick</h1>
+        <!-- Email Input -->
+        <div class="input-box">
+            <img src="https://img.icons8.com/ios-filled/50/000000/email-open.png" alt="Email Icon">
+            <input id="email" type="email" placeholder="Email">
+        </div>
+        <!-- Password Input -->
+        <div class="input-box">
+            <img src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt="Password Icon">
+            <input id="password" type="password" placeholder="Password">
+        </div>
+        <!-- Login Button -->
+        <button onclick="validateLogin()">Login</button>
+        <!-- Signup Link -->
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === '' || password === '') {
+                alert("Please enter your email and password.");
+            } else {
+                alert("Your account is not registered yet! Please sign up.");
+                window.location.href = 'signup.html';
+            }
+        }
+    </script>
+</body>
+</html>
